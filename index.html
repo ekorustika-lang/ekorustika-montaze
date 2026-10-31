@@ -104,6 +104,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
 .feat{border-color:var(--em);box-shadow:0 0 28px rgba(22,184,204,.25)}@media(min-width:861px){.feat{grid-column:1/-1;display:grid;grid-template-columns:1.2fr 1fr}.svc .feat img{height:100%;aspect-ratio:auto}}
 .mbar{grid-template-columns:1fr 1fr 1fr}.mbar .btn{font-size:13px;padding:12px 6px}
 </style>
+<link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
 </head>
 <body>
 <a class="skip" href="#main">Preskoči na sadržaj</a>
@@ -257,5 +258,6 @@ const io='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEac
 document.querySelectorAll('.reveal').forEach(el=>io?io.observe(el):el.classList.add('in'));
 document.getElementById('yr').textContent=new Date().getFullYear();
 </script>
+<script>if("serviceWorker" in navigator){addEventListener("load",()=>navigator.serviceWorker.register("sw.js"))}</script>
 </body>
 </html>
