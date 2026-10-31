@@ -104,12 +104,13 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
 .feat{border-color:var(--em);box-shadow:0 0 28px rgba(22,184,204,.25)}@media(min-width:861px){.feat{grid-column:1/-1;display:grid;grid-template-columns:1.2fr 1fr}.svc .feat img{height:100%;aspect-ratio:auto}}
 .mbar{grid-template-columns:1fr 1fr 1fr}.mbar .btn{font-size:13px;padding:12px 6px}
 </style>
-<link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="icon-192.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><meta name="application-name" content="EKORUSTIKA MONTAŽE"><meta name="apple-mobile-web-app-title" content="EKO Montaže"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<style>.eko-logo{display:inline-flex;align-items:center;gap:11px;text-decoration:none;color:#fff;line-height:1}.eko-logo .eko-mark{flex:none;filter:drop-shadow(0 0 8px #16B8CC66)}.eko-logo b{display:block;font-weight:800;font-size:16px;letter-spacing:.14em}.eko-logo small{display:block;margin-top:4px;font-size:9.5px;font-weight:700;letter-spacing:.34em;color:#47DAEB}@media(max-width:380px){.eko-logo b{font-size:14px;letter-spacing:.1em}.eko-logo small{letter-spacing:.22em}}</style>
 </head>
 <body>
 <a class="skip" href="#main">Preskoči na sadržaj</a>
 <header><nav class="wrap nav" aria-label="Glavni izbornik">
-<a class="logo" href="#top" aria-label="EKORUSTIKA početna"><i aria-hidden="true">E</i><span>EKORUSTIKA<small>MONTAŽE</small></span></a>
+<a class="eko-logo" href="#top" aria-label="EKORUSTIKA MONTAŽE početna"><svg class="eko-mark" viewBox="0 0 64 64" width="40" height="40" aria-hidden="true"><defs><linearGradient id="gm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#47DAEB"/><stop offset="1" stop-color="#16B8CC"/></linearGradient></defs><rect x="3" y="3" width="58" height="58" rx="15" fill="#071522" stroke="url(#gm)" stroke-width="2.5"/><g fill="url(#gm)"><rect x="20" y="17" width="7" height="30" rx="1.5"/><rect x="20" y="17" width="25" height="6.5" rx="1.5"/><rect x="20" y="28.75" width="20" height="6.5" rx="1.5"/><rect x="20" y="40.5" width="25" height="6.5" rx="1.5"/></g></svg><span><b>EKORUSTIKA</b><small>MONTAŽE</small></span></a>
 <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Otvori izbornik">☰</button>
 <ul class="menu" id="menu">
 <li><a href="#usluge">Usluge</a></li><li><a href="#materijali">TV zid konfigurator</a></li><li><a href="#galerija">Galerija</a></li><li><a href="#proces">Postupak</a></li><li><a href="#upit">Upit</a></li><li><a href="https://ekorustika-lang.github.io/ekorustika-digital/">Digitalni alati ↗</a></li>
@@ -258,6 +259,6 @@ const io='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEac
 document.querySelectorAll('.reveal').forEach(el=>io?io.observe(el):el.classList.add('in'));
 document.getElementById('yr').textContent=new Date().getFullYear();
 </script>
-<script>if("serviceWorker" in navigator){addEventListener("load",()=>navigator.serviceWorker.register("sw.js"))}</script>
+<script>if("serviceWorker" in navigator){addEventListener("load",()=>navigator.serviceWorker.register("service-worker.js",{scope:"./"}))}</script>
 </body>
 </html>
